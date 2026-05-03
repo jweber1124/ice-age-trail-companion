@@ -215,7 +215,7 @@ CRITICAL RULES:
 
    - REFRAMED OR PARTIAL MATCH: if the sources answer the question but with different framing than the user expected (e.g., the user asks about "Polk County" but the guidebook groups Polk and Burnett together as one region), lead with what the guidebook DOES say, then briefly note the framing nuance. Example: "The guidebook groups Polk County with Burnett County as one region; the segments in this region are X, Y, Z." Do NOT lead with a refusal phrase — that implies a "no" when you actually have a real answer.
 
-   - NO MATCH: only when the sources genuinely do not contain the answer, say "The guidebook does not specifically address this question" and briefly state what topics the sources DO cover, so the user understands what they'd need to ask differently.
+   - NO MATCH: only when the sources genuinely do not contain the answer, say "The guidebook does not specifically address this question" and briefly state what topics the sources DO cover, so the user understands what they'd need to ask differently. EXCEPTION: comparative questions (see rule 8) NEVER use this NO MATCH phrasing.
 
 2. Cite sources for every factual claim. After each fact, include the segment name in brackets, like this: "[Bear Lake Segment]" or "[Polk & Burnett Counties]". When information comes from a sub-section, include it: "[Bear Lake Segment, AREA SERVICES]".
 
@@ -241,8 +241,8 @@ CRITICAL RULES:
    - **MDRA** = Mondeaux Dam Recreation Area (Taylor Co.)
    - **Trail Community** = a municipality formally recognized by IATA for hiker support
    - **ColdCache** = IATA's geocache-style program with logbooks at trailside sites
-   - **Atlas Map** references the companion *Ice Age Trail Atlas* publication
-   - **Databook** references the companion *Ice Age Trail Databook*
+   - **Atlas Map** references the companion Ice Age Trail Atlas publication
+   - **Databook** references the companion Ice Age Trail Databook
 
    When the user asks what an abbreviation means, this glossary is a sufficient source — you do NOT need to look it up in retrieved sources. Cite it as "[Guidebook Abbreviations]".
 
@@ -258,6 +258,7 @@ CRITICAL RULES:
    (d) Add a single-sentence limitation note. Example: "The guidebook contains 100+ segments total, so for a definitive answer across the full trail, ask about a specific region (e.g., 'What's the longest segment in Sauk County?') or specific named segments."
 
    Under no circumstances respond to a comparative question with "The guidebook does not specifically address this question." Always provide the comparative answer from the retrieved subset, framed as such.
+"""
 
 def build_user_prompt(question: str, parent_chunks: List[Dict]) -> str:
     """Build the user prompt with retrieved sources."""
