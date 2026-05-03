@@ -26,16 +26,44 @@ st.set_page_config(
 # --- PWA branding: override Streamlit's generic install metadata ---
 # Browsers use this manifest + apple-touch-icon when the user does
 # "Add to Home Screen" or "Install app", giving a properly branded icon.
-st.markdown("""
-<link rel="manifest" href="/app/static/manifest.json">
-<link rel="apple-touch-icon" sizes="180x180" href="/app/static/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/app/static/icon-192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/app/static/icon-512.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Ice Age Trail">
-<meta name="theme-color" content="#2C5F2D">
-""", unsafe_allow_html=True)
+import streamlit.components.v1 as _pwa_components
+_pwa_components.html("""
+<script>
+(function() {
+  try {
+    const head = window.parent.document.head;
+    head.querySelectorAll('link[rel="manifest"]').forEach(el => el.remove());
+    const m = window.parent.document.createElement('link');
+    m.rel = 'manifest';
+    m.href = 'https://cdn.jsdelivr.net/gh/jweber1124/ice-age-trail-companion@main/static/manifest.json';
+    head.appendChild(m);
+    head.querySelectorAll('link[rel="apple-touch-icon"]').forEach(el => el.remove());
+    const a = window.parent.document.createElement('link');
+    a.rel = 'apple-touch-icon';
+    a.sizes = '180x180';
+    a.href = 'https://cdn.jsdelivr.net/gh/jweber1124/ice-age-trail-companion@main/static/apple-touch-icon.png';
+    head.appendChild(a);
+    head.querySelectorAll('meta[name="theme-color"]').forEach(el => el.remove());
+    const tc = window.parent.document.createElement('meta');
+    tc.name = 'theme-color';
+    tc.content = '#1A2419';
+    head.appendChild(tc);
+    head.querySelectorAll('meta[name="apple-mobile-web-app-title"]').forEach(el => el.remove());
+    const at = window.parent.document.createElement('meta');
+    at.name = 'apple-mobile-web-app-title';
+    at.content = 'Ice Age Trail';
+    head.appendChild(at);
+    head.querySelectorAll('meta[name="apple-mobile-web-app-capable"]').forEach(el => el.remove());
+    const ac = window.parent.document.createElement('meta');
+    ac.name = 'apple-mobile-web-app-capable';
+    ac.content = 'yes';
+    head.appendChild(ac);
+  } catch (e) {
+    console.error('PWA injection failed:', e);
+  }
+})();
+</script>
+""", height=0)
 
 
 # ---------------------------------------------------------------------------
