@@ -1,14 +1,5 @@
 import os
 os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
-"""
-Ice Age Trail Guidebook Q&A — Streamlit chat interface.
-
-Run locally:
-    streamlit run app.py
-
-Reads keys from environment variables VOYAGE_API_KEY and XAI_API_KEY,
-or from Streamlit secrets when deployed to Streamlit Cloud.
-"""
 import os
 import time
 from pathlib import Path
