@@ -1,0 +1,188 @@
+COMPLETE SEGMENT CATALOG OF THE ICE AGE TRAIL
+(generated from the 2023 IATA guidebook)
+Total segments: 136 | Mileages extracted: 90
+
+
+### Polk & Burnett Counties
+  - Gandy Dancer Segment, Atlas Map 1f, 2f, 3f — 15.5 mi
+  - Indian Creek Segment, Atlas Map 5f — 5.4 mi
+  - McKenzie Creek Segment — 9.4 mi
+  - Sand Creek Segment, Atlas Map 5f, 6f — 6.0 mi
+  - St. Croix Falls Segment, Atlas Map 1f — 8.9 mi
+  - Straight Lake Segment — 3.6 mi
+  - Straight River Segment — 3.4 mi
+  - Straight River Segment and Pine Lake Segment, Atlas Map 3f, 4f — 6.3 mi
+  - Trade River Segment — 4.3 mi
+  - Trade River Segment and Straight Lake Segment, Atlas Map 3f — 7.9 mi
+
+### Barron & Washburn Counties
+  - Bear Lake Segment, Atlas Map 8f — 5.4 mi
+  - Grassy Lake Segment, Atlas Map 7f — 8.5 mi
+  - Hemlock Creek Segment, Atlas Map 10f — 7.0 mi
+  - Timberland Hills Segment, Atlas Map 6f — 10.9 mi
+  - Tuscobia Segment, Atlas Map 8f, 9f, 10f — 11.2 mi
+
+### Rusk County
+  - Northern Blue Hills Segment, Atlas Map 11f — 9.6 mi
+  - Southern Blue Hills Segment, Atlas Map 12f — 7.3 mi
+
+### Chippewa County
+  - Chippewa Moraine Segment, Atlas Map 15f — 7.9 mi
+  - Cornell Segment, Atlas Map 17f — 1.5 mi
+  - Firth Lake Segment — 8.4 mi
+  - Firth Lake Segment and Chippewa River Segment, Atlas Map 16f — 10.3 mi
+  - Harwood Lakes Segment, Atlas Map 15f, 16f — 6.2 mi
+
+### Taylor County
+  - East Lake Segment — 6.5 mi
+  - Jerry Lake Segment, Atlas Map 22f, 23f — 15.2 mi
+  - Lake Eleven Segment, Atlas Map 20f, 21f, 22f — 15.6 mi
+  - Mondeaux Esker Segment, Atlas Map 23f — 11.7 mi
+  - Pine Line Segment — 0.9 mi
+  - Pine Line Segment and East Lake Segment, Atlas Map 24f, 25f — 7.4 mi
+  - Rib Lake Segment, Atlas Map 25f — 5.5 mi
+  - Wood Lake Segment, Atlas Map 25f, 26f — 13.4 mi
+
+### Lincoln County
+  - Alta Junction Segment — (mileage TBD)
+  - Averill-Kelly Creek Wilderness Segment, Atlas Map 27f, 28f — 4.7 mi
+  - Camp 27 Segment — 2.9 mi
+  - Camp 27 Segment and New Wood Segment, Atlas Map 26f, 27 — 10.0 mi
+  - Grandfather Falls Segment — (mileage TBD)
+  - Harrison Hills Segment, Atlas Map 30f, 31f — 14.5 mi
+  - New Wood Segment — 7.1 mi
+  - Timberland Wilderness Segment, Atlas Map 26f — 3.9 mi
+  - Turtle Rock Segment — (mileage TBD)
+  - Turtle Rock Segment and Grandfather Falls Segment, Atlas Map 28f — (mileage TBD)
+  - Underdown Segment — (mileage TBD)
+  - Underdown Segment and Alta Junction Segment, Atlas Map 29f, 30f — (mileage TBD)
+
+### Langlade County
+  - Highland Lakes Segment, Atlas Map 32f, 33f — 12.8 mi
+  - Kettlebowl Segment, Atlas Map 35f, 36f — 10.2 mi
+  - Lumbercamp Segment, Atlas Map 34f, 35f — (mileage TBD)
+  - Parrish Hills Segment — 12.0 mi
+  - Summit Moraine Segment, Atlas Map 33f, 34f — 12.4 mi
+
+### Marathon County
+  - Dells of the Eau Claire Segment — (mileage TBD)
+  - Dells of the Eau Claire Segment and Thornapple Creek Segment, Atlas Map 40f, 41f — (mileage TBD)
+  - Plover River Segment, Atlas Map 39f — 5.9 mi
+  - Ringle Segment, Atlas Map 41f — 8.8 mi
+  - Thornapple Creek Segment — (mileage TBD)
+  - White Cedar Segment, Atlas Map 42f — 0.6 mi
+
+### Portage & Waupaca Counties
+  - Emmons Creek Segment, Atlas Map 48f — 2.6 mi
+  - Hartman Creek Segment, Atlas Map 48f — 5.5 mi
+  - Iola Ski Hill Segment — (mileage TBD)
+  - New Hope Segment — (mileage TBD)
+  - New Hope Segment and Iola Ski Hill Segment, Atlas Map 45f — (mileage TBD)
+  - Skunk and Foster Lakes Segment and Waupaca River Segment, Atlas Map 47f — (mileage TBD)
+
+### Waushara County
+  - Bohn Lake Segment and Greenwood Segment, Atlas Map 51f — (mileage TBD)
+  - Chaffee Creek Segment — (mileage TBD)
+  - Deerfield Segment, Atlas Map 50f — 3.7 mi
+  - Greenwood Segment — 5.0 mi
+  - Mecan River Segment, Atlas Map 52f — 7.5 mi
+  - Wedde Creek Segment — (mileage TBD)
+  - Wedde Creek Segment and Chaffee Creek Segment, Atlas Map 52f, 53f-E — (mileage TBD)
+
+### Marquette County
+  - John Muir Park Segment, Atlas Map 56f-E — 1.8 mi
+
+### Northern Columbia County
+  - Portage Canal Segment, Atlas Map 57f-E — 3.6 mi
+
+### Sauk County
+  - Baraboo Segment, Atlas Map 60f-W — 4.0 mi
+  - Devil’s Lake Segment, Atlas Map 61f — 10.9 mi
+  - Merrimac Segment, Atlas Map 61f — 3.7 mi
+  - Sauk Point Segment, Atlas Map 61f — 3.9 mi
+
+### Southern Columbia County
+  - Fern Glen Segment and Lodi Segment, Atlas Map 62f, 63f — (mileage TBD)
+  - Gibraltar Rock Segment, Atlas Map 62f — 4.8 mi
+  - Lodi Segment — (mileage TBD)
+
+### Dane County
+  - Brooklyn Wildlife Segment, Atlas Map 68f — 3.4 mi
+  - Cross Plains Segment, Atlas Map 65f — 9.9 mi
+  - Indian Lake Segment — (mileage TBD)
+  - Lodi Marsh Segment, Atlas Map 63f — 5.0 mi
+  - Montrose Segment, Atlas Map 67f — 7.5 mi
+  - Springfield Hill Segment — (mileage TBD)
+  - Springfield Hill Segment and Indian Lake Segment, Atlas Map 64f — (mileage TBD)
+  - Table Bluff Segment, Atlas Map 64f, 65f — (mileage TBD)
+  - Valley View Segment and Madison Segment, Atlas Map 65f, 66f — 6.5 mi
+  - Verona Segment, Atlas Map 66f — 6.3 mi
+
+### Green County
+  - Albany Segment, Atlas Map 69f, 70f — 9.3 mi
+  - Monticello Segment, Atlas Map 68f, 69f — 6.6 mi
+
+### Rock County
+  - Arbor Ridge Segment — 2.1 mi
+  - Arbor Ridge Segment and Devil’s Staircase Segment, Atlas Map 73f, 74f — 3.9 mi
+  - Evansville Segment, Atlas Map 72f — 1.7 mi
+  - Gibbs Lake Segment, Atlas Map 72f — 1.3 mi
+  - Janesville Segment, Atlas Map 74 — 10.3 mi
+  - Janesville to Milton Segment, Atlas Map 75f — 3.2 mi
+  - Milton Segment — (mileage TBD)
+  - Milton Segment and Storrs Lake Segment, Atlas Map 75f, 76f — (mileage TBD)
+  - Storrs Lake Segment — (mileage TBD)
+
+### Walworth & Jefferson Counties
+  - Blackhawk Segment, Atlas Map 79f — 7.0 mi
+  - Blue Spring Lake Segment, Atlas Map 79f, 80 — 7.1 mi
+  - Clover Valley Segment, Atlas Map 77f — 1.6 mi
+  - Whitewater Lake Segment, Atlas Map 78f — (mileage TBD)
+
+### Waukesha County
+  - Eagle Segment, Atlas Map 80f — (mileage TBD)
+  - Hartland Segment, Atlas Map 82f — 6.8 mi
+  - Lapham Peak Segment — (mileage TBD)
+  - Lapham Peak Segment and Delafield Segment, Atlas Map 81f, 82f — (mileage TBD)
+  - Merton Segment — (mileage TBD)
+  - Merton Segment and Monches Segment, Atlas Map 83f — (mileage TBD)
+  - Scuppernong Segment, Atlas Map 80f, 81f — 5.6 mi
+  - Stony Ridge Segment, Atlas Map 80f — 3.1 mi
+  - Waterville Segment, Atlas Map 81f — 5.8 mi
+
+### Washington County
+  - Cedar Lakes Segment — (mileage TBD)
+  - Holy Hill Segment, Atlas Map 84f — 6.8 mi
+  - Kewaskum Segment, Atlas Map 86f — (mileage TBD)
+  - Loew Lake Segment, Atlas Map 83f, 84f — 4.9 mi
+  - Milwaukee River Segment (Washington County), Atlas Map 86f, 87f — (mileage TBD)
+  - Pike Lake Segment — (mileage TBD)
+  - Pike Lake Segment, Slinger Segment, and Cedar Lakes Segment, Atlas Map 84f, 85f — (mileage TBD)
+  - Slinger Segment — (mileage TBD)
+  - West Bend Segment, Atlas Map 85f, 86f — 6.7 mi
+
+### Fond du Lac & Sheboygan Counties
+  - Greenbush Segment, Atlas Map 89f — 8.5 mi
+  - LaBudde Creek Segment, Atlas Map 90f — (mileage TBD)
+  - Milwaukee River Segment (Fond du Lac County), Atlas Map 87f — 4.3 mi
+  - Parnell Segment, Atlas Map 87f, 88f, 89f — 13.9 mi
+
+### Manitowoc County
+  - Dunes Segment — 2.7 mi
+  - Dunes Segment and Two Rivers Segment, Atlas Map 95f, 96f — 5.7 mi
+  - East Twin River Segment — (mileage TBD)
+  - Manitowoc Segment, Atlas Map 95f — (mileage TBD)
+  - Mishicot Segment — (mileage TBD)
+  - Mishicot Segment and East Twin River Segment, Atlas Map 97f — (mileage TBD)
+  - Point Beach Segment, Atlas Map 96f — 10.0 mi
+  - Tisch Mills Segment, Atlas Map 98f — 2.7 mi
+  - Two Rivers Segment — 3.0 mi
+  - Walla Hi Segment, Atlas Map 91f — 2.3 mi
+
+### Kewaunee & Door Counties
+  - Forestville Segment, Atlas Map 102f, 103f, 104f — 9.8 mi
+  - Kewaunee River Segment — (mileage TBD)
+  - Sturgeon Bay Segment, Atlas Map 104f, 105f — 14.0 mi
+
+### Unattributed
+  - Segment Names — (mileage TBD)

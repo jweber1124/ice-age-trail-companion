@@ -30,6 +30,13 @@ CHROMA_DIR      = os.environ.get("CHROMA_DIR", os.path.join(_HERE, ".chroma_db")
 CHILD_PATH      = os.path.join(_HERE, "child_chunks.jsonl")
 PARENT_LOOKUP   = os.path.join(_HERE, "parent_lookup.json")
 EMBEDDINGS_CACHE = os.path.join(_HERE, "embeddings_cache.pkl")
+TRAIL_CATALOG_PATH = os.path.join(_HERE, "trail_catalog.txt")
+
+# Load trail catalog at module load time so it's ready for every prompt
+try:
+    _TRAIL_CATALOG = Path(TRAIL_CATALOG_PATH).read_text(encoding='utf-8')
+except Exception:
+    _TRAIL_CATALOG = ""
 
 EMBED_MODEL     = "voyage-3-large"
 GROK_MODEL      = "grok-4.3"
@@ -209,13 +216,7 @@ SYSTEM_PROMPT = """You are a hiking assistant for the Ice Age National Scenic Tr
 
 CRITICAL RULES:
 
-1. Answer ONLY from the provided source material. Never speculate, never use general knowledge, never invent details. Hikers may rely on your answers for safety-critical decisions (water, shelter, hunting seasons, road crossings). Apply one of three behaviors based on what the sources contain:
-
-   - DIRECT MATCH: if the sources directly answer the question, lead with the answer itself, in plain language. Do NOT preface it with "the guidebook does not address this question." Just give the answer with citations.
-
-   - REFRAMED OR PARTIAL MATCH: if the sources answer the question but with different framing than the user expected (e.g., the user asks about "Polk County" but the guidebook groups Polk and Burnett together as one region), lead with what the guidebook DOES say, then briefly note the framing nuance. Example: "The guidebook groups Polk County with Burnett County as one region; the segments in this region are X, Y, Z." Do NOT lead with a refusal phrase — that implies a "no" when you actually have a real answer.
-
-   - NO MATCH: only when the sources genuinely do not contain the answer, say "The guidebook does not specifically address this question" and briefly state what topics the sources DO cover, so the user understands what they'd need to ask differently. EXCEPTION: comparative questions (see rule 8) NEVER use this NO MATCH phrasing.
+1. Answer ONLY from the provided source material. If the answer is not contained in the sources, say so directly: "The guidebook does not specifically address this question." Never speculate, never use general knowledge, never invent details. Hikers may rely on your answers for safety-critical decisions (water, shelter, hunting seasons, road crossings).
 
 2. Cite sources for every factual claim. After each fact, include the segment name in brackets, like this: "[Bear Lake Segment]" or "[Polk & Burnett Counties]". When information comes from a sub-section, include it: "[Bear Lake Segment, AREA SERVICES]".
 
@@ -241,24 +242,16 @@ CRITICAL RULES:
    - **MDRA** = Mondeaux Dam Recreation Area (Taylor Co.)
    - **Trail Community** = a municipality formally recognized by IATA for hiker support
    - **ColdCache** = IATA's geocache-style program with logbooks at trailside sites
-   - **Atlas Map** references the companion Ice Age Trail Atlas publication
-   - **Databook** references the companion Ice Age Trail Databook
+   - **Atlas Map** references the companion *Ice Age Trail Atlas* publication
+   - **Databook** references the companion *Ice Age Trail Databook*
 
    When the user asks what an abbreviation means, this glossary is a sufficient source — you do NOT need to look it up in retrieved sources. Cite it as "[Guidebook Abbreviations]".
 
 6. If the user's question is ambiguous (multiple possible segments, dates, or locations), ask one brief clarifying question rather than guessing.
 
 7. If a user asks about something safety-critical (hunting, water, weather, hazards) and the sources only partially address it, be explicit about what the guidebook covers and what it doesn't, and recommend confirming with the relevant agency or the IATA before relying on the answer.
-
-8. COMPARATIVE QUESTIONS (longest, shortest, most, fewest, biggest, smallest, hardest, easiest, all, every) require special handling. THE NO-MATCH REFUSAL FROM RULE 1 DOES NOT APPLY TO THESE QUESTIONS. The retrieved sources are a relevant subset that typically contains measurable data for several segments. You MUST:
-
-   (a) Identify the best answer from the retrieved subset (e.g., the longest among the segments you can see).
-   (b) State that answer clearly and lead with it. Example: "Of the segments in the retrieved sources, the Devil's Lake Segment is longest at 10.9 miles."
-   (c) List the other retrieved segments with their measurable values for context. Example: "Other retrieved segments by length: Plover River (5.9 mi), Waterville (5.8 mi), Hartman Creek (5.5 mi)."
-   (d) Add a single-sentence limitation note. Example: "The guidebook contains 100+ segments total, so for a definitive answer across the full trail, ask about a specific region (e.g., 'What's the longest segment in Sauk County?') or specific named segments."
-
-   Under no circumstances respond to a comparative question with "The guidebook does not specifically address this question." Always provide the comparative answer from the retrieved subset, framed as such.
 """
+
 
 def build_user_prompt(question: str, parent_chunks: List[Dict]) -> str:
     """Build the user prompt with retrieved sources."""
@@ -280,10 +273,27 @@ Answer the question using only the source material above. Cite each fact with th
 def generate_answer(question: str, parent_chunks: List[Dict]) -> str:
     grok = get_grok()
     user_prompt = build_user_prompt(question, parent_chunks)
+
+    # Append the complete trail catalog to the system prompt so the model
+    # always has the full segment list available for comparative questions
+    # and segment-existence checks.
+    full_system = SYSTEM_PROMPT
+    if _TRAIL_CATALOG:
+        full_system += (
+            "\n\n--- TRAIL CATALOG REFERENCE ---\n\n"
+            "Below is the complete catalog of every trail segment in the guidebook, "
+            "with mileage where available. Use this catalog (a) for comparative questions "
+            "(longest, shortest, etc.) where the retrieved sources only show a few segments, "
+            "(b) to confirm a segment exists when the user asks about one not in the retrieved "
+            "sources, and (c) to suggest related segments. Treat the catalog as part of the "
+            "guidebook source material; cite as [Trail Catalog].\n\n"
+            + _TRAIL_CATALOG
+        )
+
     resp = grok.chat.completions.create(
         model=GROK_MODEL,
         messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": full_system},
             {"role": "user", "content": user_prompt},
         ],
         temperature=0.1,
