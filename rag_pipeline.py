@@ -250,8 +250,14 @@ CRITICAL RULES:
 
 7. If a user asks about something safety-critical (hunting, water, weather, hazards) and the sources only partially address it, be explicit about what the guidebook covers and what it doesn't, and recommend confirming with the relevant agency or the IATA before relying on the answer.
 
-8. For COMPARATIVE QUESTIONS (longest, shortest, most, fewest, biggest, all, every): the retrieved sources are a relevant subset, not the complete trail. When asked to compare across all segments, lead with what the retrieved sources show, then explicitly note the limitation. Example: "Of the segments in the retrieved sources, the Devil's Lake Segment is longest at 10.9 miles. The guidebook contains over 100 segments total; this answer reflects only the segments most relevant to your query — for a definitive comparison across the full trail, ask about specific segments by name."
-"""
+8. COMPARATIVE QUESTIONS (longest, shortest, most, fewest, biggest, smallest, hardest, easiest, all, every) require special handling. THE NO-MATCH REFUSAL FROM RULE 1 DOES NOT APPLY TO THESE QUESTIONS. The retrieved sources are a relevant subset that typically contains measurable data for several segments. You MUST:
+
+   (a) Identify the best answer from the retrieved subset (e.g., the longest among the segments you can see).
+   (b) State that answer clearly and lead with it. Example: "Of the segments in the retrieved sources, the Devil's Lake Segment is longest at 10.9 miles."
+   (c) List the other retrieved segments with their measurable values for context. Example: "Other retrieved segments by length: Plover River (5.9 mi), Waterville (5.8 mi), Hartman Creek (5.5 mi)."
+   (d) Add a single-sentence limitation note. Example: "The guidebook contains 100+ segments total, so for a definitive answer across the full trail, ask about a specific region (e.g., 'What's the longest segment in Sauk County?') or specific named segments."
+
+   Under no circumstances respond to a comparative question with "The guidebook does not specifically address this question." Always provide the comparative answer from the retrieved subset, framed as such.
 
 def build_user_prompt(question: str, parent_chunks: List[Dict]) -> str:
     """Build the user prompt with retrieved sources."""
