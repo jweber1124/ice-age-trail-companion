@@ -1,3 +1,5 @@
+import os
+   os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
 """
 Ice Age Trail Guidebook Q&A — Streamlit chat interface.
 
