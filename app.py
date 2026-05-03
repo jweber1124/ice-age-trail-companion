@@ -1,5 +1,12 @@
-import os
-os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
+"""
+Ice Age Trail Guidebook Q&A — Streamlit chat interface.
+
+Run locally:
+    streamlit run app.py
+
+Reads keys from environment variables VOYAGE_API_KEY and XAI_API_KEY,
+or from Streamlit secrets when deployed to Streamlit Cloud.
+"""
 import os
 import time
 from pathlib import Path
@@ -15,6 +22,21 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="collapsed",
 )
+
+# --- PWA branding: override Streamlit's generic install metadata ---
+# Browsers use this manifest + apple-touch-icon when the user does
+# "Add to Home Screen" or "Install app", giving a properly branded icon.
+st.markdown("""
+<link rel="manifest" href="/app/static/manifest.json">
+<link rel="apple-touch-icon" sizes="180x180" href="/app/static/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/app/static/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/app/static/icon-512.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Ice Age Trail">
+<meta name="theme-color" content="#2C5F2D">
+""", unsafe_allow_html=True)
+
 
 # ---------------------------------------------------------------------------
 # Load API keys (prefers Streamlit secrets in production, env vars locally)
